@@ -1,0 +1,24 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master # Ваша основна гілка
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Build and Deploy
+      run: |
+        # Тут ви можете додати команди для збірки вашого проекту, якщо потрібно
+        # Наприклад, npm install і npm run build
+
+        # Деплой на гілку gh-pages або у папку docs
+        git config user.name "${GITHUB_ACTOR}"
+        git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+        npm run deploy # Або інша команда для деплою
