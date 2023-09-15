@@ -1,12 +1,25 @@
 header {
-    @media(min-width:1025px) {
-        background-color: transparent;
-        position: static;
-    }
-    position: fixed;
+
+    position: absolute;
+    top: 0;
+    left: 0;
     background-color: #000;
     padding: 5px 0;
     width: 100%;
+    z-index: 11;
+    &.fix {
+        position: fixed;
+        background-color: #000000d6;
+    }
+
+    @media(min-width:1025px) {
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+
+      
+
+    }
 
     .header {
         display: flex;
@@ -14,7 +27,7 @@ header {
         justify-content: space-between;
         align-items: center;
         padding: 5px;
-       
+
         width: 100%;
 
         // @media(min-width:1025px) {
@@ -31,9 +44,9 @@ header {
             width: 100%;
             height: 100vh;
             max-height: 0;
-            overflow: auto;
+            // overflow: auto;
             opacity: 0;
-            transition: max-height 0.6s;
+            // transition: all 0.3s;
 
             ul.menu {
                 list-style-type: none;
@@ -42,6 +55,8 @@ header {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                
+              visibility: hidden;
 
                 li.menu__item {
                     margin: 20px;
@@ -58,6 +73,7 @@ header {
                         }
 
                         a {
+
                             margin: 10px;
                         }
                     }
@@ -65,7 +81,7 @@ header {
             }
 
             &.active {
-                transition: max-height 0.6s;
+                transition: max-height 0.3s;
                 max-height: 100vh;
                 opacity: 1;
                 top: 55px;
@@ -73,6 +89,9 @@ header {
                 right: 0;
                 bottom: 0;
                 background-color: #000;
+                ul.menu {
+                    visibility:visible;
+                }
             }
 
             @media(min-width: 1025px) {
@@ -91,7 +110,8 @@ header {
                         margin: 0 15px;
 
                         a {
-                            color: black;
+                            color: red;
+                            font-size: 18px;
                         }
 
                         &._social {
@@ -102,8 +122,65 @@ header {
                         }
 
                         &._bookNow {
+                            text-decoration: none;
+                                text-transform: uppercase;
+                                overflow: hidden;
+                                transition: .5s;
+                                position: relative;
                             a {
                                 color: red;
+                                padding: 5px;
+                                // border: 1px solid red;
+                                border-radius: 3px;
+
+                               
+                                // display: inline-block;
+                                // padding: 10px 20px;
+                                // color: #03e9f4;
+                                // font-size: 16px;
+                              
+
+                                span {
+                                    position: absolute;
+                                    display: block;
+                                    &:nth-child(1) {
+                                        top: 0;
+                                        left: -100%;
+                                        width: 100%;
+                                        height: 2px;
+                                        background: linear-gradient(90deg, transparent, red);
+                                        animation: btn-anim1 1s linear infinite;
+                                      }
+                                      &:nth-child(2) {
+                                        top: -100%;
+                                        right: 0;
+                                        width: 2px;
+                                        height: 100%;
+                                        background: linear-gradient(180deg, transparent, red);
+                                        animation: btn-anim2 1s linear infinite;
+                                        animation-delay: .25s
+                                      }
+                                      &:nth-child(3) {
+                                        bottom: 0;
+                                        right: -100%;
+                                        width: 100%;
+                                        height: 2px;
+                                        background: linear-gradient(270deg, transparent, red);
+                                        animation: btn-anim3 1s linear infinite;
+                                        animation-delay: .5s
+                                      }
+                                      &:nth-child(4) {
+                                        bottom: -100%;
+                                        left: 0;
+                                        width: 2px;
+                                        height: 100%;
+                                        background: linear-gradient(360deg, transparent, red);
+                                        animation: btn-anim4 1s linear infinite;
+                                        animation-delay: .75s
+                                      }
+
+                                }
+
                             }
                         }
                     }
@@ -189,3 +266,39 @@ header {
 
     }
 }
+
+
+
+@keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }

@@ -1,0 +1,79 @@
+.services {
+    padding: 100px 0 0;
+    background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
+    height: 100vh;
+    background-position: 1% center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    border-bottom: 1px solid black;
+
+    svg {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .content {
+        height: 100vh;
+        // width: 50%;
+        width: 100%;
+        margin-left: auto;
+        overflow: hidden;
+        @media(min-width:650px){
+            width: 70%;
+        }
+        @media(min-width:1024px){
+            width: 50%;
+        }
+        &.scroll {
+            overflow: scroll;
+        }
+
+        .price-box {
+            text-transform: uppercase;
+            margin-bottom: 64px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            color: #242222;
+
+            .price-list {
+                width: 100%;
+                backdrop-filter: blur(8px);
+                text-shadow: 1px 1px #ffffff5c;
+
+                .header {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 16px 0;
+                    border-bottom: 1px solid #242222;
+                    background: rgba(0, 0, 0, .3294117647);
+
+                    .title,
+                    .price {
+                        width: 50%;
+                        padding: 8px 16px;
+                    }
+                }
+
+                .item {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .title,
+                    .price {
+                        width: 50%;
+                        padding: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.baner {
+    background-color: #fbf8f2;
+    padding: 100px 70px;
+}
