@@ -117,13 +117,17 @@ if (rswiper) {
 
 
 
+
+
+
+
 let scrollpos = window.scrollY;
 const promo = document.querySelector(".promo");
 const header = document.querySelector("header");
 const baner = document.querySelector(".baner");
 const servicescroll = document.querySelector(".services .container .content");
 
-const scrollChange = header.clientHeight;
+const scrollChange = header.clientHeight / 2;
 const scrollToscroll = promo.clientHeight + baner.clientHeight + scrollChange;
 
 const add_class_on_scroll = (el, className) => el.classList.add(className);
@@ -138,10 +142,10 @@ window.addEventListener('scroll', function () {
     remove_class_on_scroll(header, 'fix')
   }
 
-  if (scrollpos >= scrollToscroll) {
-    add_class_on_scroll(servicescroll, 'scroll')
-  } else {
-    remove_class_on_scroll(servicescroll, 'scroll')
-  }
+  // if (scrollpos >= scrollToscroll) {
+  //   add_class_on_scroll(servicescroll, 'scroll')
+  // } else {
+  //   remove_class_on_scroll(servicescroll, 'scroll')
+  // }
 
 })

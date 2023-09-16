@@ -1,7 +1,6 @@
 .services {
     padding: 100px 0 0;
     background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
-    height: 100vh;
     background-position: 1% center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -14,20 +13,19 @@
     }
 
     .content {
-        height: 100vh;
+
         // width: 50%;
         width: 100%;
         margin-left: auto;
-        overflow: hidden;
-        @media(min-width:650px){
+
+        @media(min-width:650px) {
             width: 70%;
         }
-        @media(min-width:1024px){
+
+        @media(min-width:1024px) {
             width: 50%;
         }
-        &.scroll {
-            overflow: scroll;
-        }
+
 
         .price-box {
             text-transform: uppercase;
@@ -36,11 +34,13 @@
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
-            color: #242222;
+            // color: #242222; 
+            color: #fff;
 
             .price-list {
                 width: 100%;
-                backdrop-filter: blur(8px);
+                // backdrop-filter: blur(8px);
+                backdrop-filter: brightness(0.5);
                 text-shadow: 1px 1px #ffffff5c;
 
                 .header {
