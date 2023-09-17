@@ -1,11 +1,39 @@
 .services {
     padding: 100px 0 0;
-    background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
-    background-position: 1% center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    position: relative;
+    width: 100%;
+    // height: 100vh;
     overflow: hidden;
+    background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
+    // background-position: 1% center;
+    // background-repeat: no-repeat;
+    background-attachment: fixed;
+    // overflow: hidden;
     border-bottom: 1px solid black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // height: 200%; /* Увеличьте эту высоту для более выраженного эффекта параллакса */
+    // transform: translateY(-50%);
+    z-index: -1;
+    transition: transform 0.2s ease-in-out;
+
+    .paralax-img {
+        background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
+        // background-size: cover;
+        // background-repeat: no-repeat;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // width: 100%;
+        // height: 200%; /* Увеличьте эту высоту для более выраженного эффекта параллакса */
+        // transform: translateY(-50%);
+        // z-index: -1;
+        // transition: transform 0.2s ease-in-out;
+    }
 
     svg {
         display: block;
@@ -13,7 +41,7 @@
     }
 
     .content {
-
+        z-index: 1;
         // width: 50%;
         width: 100%;
         margin-left: auto;
@@ -75,5 +103,8 @@
 
 .baner {
     background-color: #fbf8f2;
-    padding: 100px 70px;
+    padding: 108px 25px;
+    @media(min-width:800px){
+        padding: 100px 70px;
+    }
 }

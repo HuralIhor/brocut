@@ -113,11 +113,29 @@ if (rswiper) {
   swiper.controller.control = swiper2;
 
 }
+// paralax
+
+// const parallaxBg = document.querySelector('.paralax-img');
+
+// // window.addEventListener('scroll', () => {
+// //     const scrollY = window.scrollY;
+// //     const translateY = scrollY * 1.5; // Измените это значение по вашему желанию для более сильного или слабого эффекта параллакса
+// //     parallaxBg.style.transform = `translateY(${translateY}px)`;
+// // });
 
 
 
 
+// function updateParallax() {
+//     const scrollY = window.scrollY || window.pageYOffset; // Учитываем разные способы получения значения scroll на разных устройствах
+//     const translateY = -scrollY * 0.1; // Измените это значение по вашему желанию для более сильного или слабого эффекта параллакса
+//     parallaxBg.style.transform = `translateY(${translateY}px)`;
+// }
 
+// // Вызываем функцию при загрузке страницы и при изменении размеров окна
+// window.addEventListener('load', updateParallax);
+// window.addEventListener('resize', updateParallax);
+// window.addEventListener('scroll', updateParallax);
 
 
 
