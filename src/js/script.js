@@ -3,36 +3,22 @@ const swiper = new Swiper('.swiper2', {
   loop: true,
   slidesPerView: 1,
   speed: 500,
-  effect: 'cube',
-  // observe: true,
-  // observeParents: true,
-
+  effect: 'fade',
+  autolay: true,
   breakpoints: {
     1024: {
       direction: 'horizontal',
-      effect: 'flip',
+      effect: 'fade',
       crossFade: true,
       limitRotation: false,
-      speed: 300,
-
-    
-      // pagination: {
-      //   el: '.swiper1 .swiper-pagination',
-      //   clickable: true,
-      // },
-
+      speed: 100,
     },
   }
-
 });
-
-
-
-
-
 window.addEventListener('resize', function () {
   const promo = document.querySelector(".promo");
   const rswiper = document.querySelector('.swiper1');
+
   if (document.documentElement.clientWidth >= 1024) {
     if (!rswiper) {
       promo.insertAdjacentHTML('beforeend',
@@ -100,8 +86,10 @@ if (rswiper) {
     loop: true,
     slidesPerView: 1,
   effect: 'cube',
+  autolay: true,
 
-    speed: 1200,
+
+    speed: 500,
     reverseDirection: true,
     pagination: {
       el: '.swiper1 .swiper-pagination',
@@ -113,31 +101,6 @@ if (rswiper) {
   swiper.controller.control = swiper2;
 
 }
-// paralax
-
-// const parallaxBg = document.querySelector('.paralax-img');
-
-// // window.addEventListener('scroll', () => {
-// //     const scrollY = window.scrollY;
-// //     const translateY = scrollY * 1.5; // Измените это значение по вашему желанию для более сильного или слабого эффекта параллакса
-// //     parallaxBg.style.transform = `translateY(${translateY}px)`;
-// // });
-
-
-
-
-// function updateParallax() {
-//     const scrollY = window.scrollY || window.pageYOffset; // Учитываем разные способы получения значения scroll на разных устройствах
-//     const translateY = -scrollY * 0.1; // Измените это значение по вашему желанию для более сильного или слабого эффекта параллакса
-//     parallaxBg.style.transform = `translateY(${translateY}px)`;
-// }
-
-// // Вызываем функцию при загрузке страницы и при изменении размеров окна
-// window.addEventListener('load', updateParallax);
-// window.addEventListener('resize', updateParallax);
-// window.addEventListener('scroll', updateParallax);
-
-
 
 let scrollpos = window.scrollY;
 const promo = document.querySelector(".promo");
@@ -167,3 +130,4 @@ window.addEventListener('scroll', function () {
   // }
 
 })
+
