@@ -9,19 +9,17 @@
         display: block;
         z-index: 1;
         position: absolute;
-        top: 50%;
+        top: 80%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 80%;
         max-width: 450px;
         z-index: 3;
+        @media(min-width:1025px) {
+            top: 50%;
+        }
     }
 }
-
-
-
-
-
 
 .swiper {
     width: 100%;
@@ -53,6 +51,13 @@
             height: 50%;
             background-color: #f1f1f1;
         }
+        &:first-child {
+            img {
+                height: 100%;
+                object-fit: cover;
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -63,6 +68,12 @@
     .swiper-pagination {
             display: none;
         }
+    }
+}
+.swiper.swiper1 {
+    display: none;
+    @media(min-width:1025px){
+       display: block;
     }
 }
 

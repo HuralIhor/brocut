@@ -1,25 +1,12 @@
 header {
 
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    background-color: #000;
+    background-color: #000000d6;
     padding: 5px 0;
     width: 100%;
     z-index: 11;
-    &.fix {
-        position: fixed;
-        background-color: #000000d6;
-    }
-
-    @media(min-width:1025px) {
-        background-color: transparent;
-        position: absolute;
-        top: 0;
-
-      
-
-    }
 
     .header {
         display: flex;
@@ -108,7 +95,7 @@ header {
                         margin: 0 15px;
 
                         a {
-                            color: red;
+                            color: white;
                             font-size: 18px;
                         }
 
@@ -211,7 +198,7 @@ header {
             //     background: hsla(0, 0, 255, 0.1);
             //   }
             // }
-            @media(min-width: 1024px) {
+            @media(min-width: 1025px) {
                 display: none;
             }
 
@@ -256,11 +243,6 @@ header {
                 }
             }
         }
-
-
-
-
-
 
     }
 }
