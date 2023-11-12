@@ -3,10 +3,14 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #000000d6;
     padding: 5px 0;
+    background-color: #000;
     width: 100%;
     z-index: 11;
+    @media(min-width:1025px) {
+        background-color: #000000d6;
+
+    }
 
     &.fix {
         background-color: #000;
@@ -29,6 +33,8 @@ header {
             width: 100%;
             height: 100vh;
             max-height: 0;
+            transition: max-height 0.3s;
+
 
             ul.menu {
                 list-style-type: none;

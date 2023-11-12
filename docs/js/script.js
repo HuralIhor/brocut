@@ -66,3 +66,12 @@ window.addEventListener('scroll', function () {
     }
   }
 })
+
+// const burger= document.querySelector('#durgerMenu');
+// const menuItems = document.querySelectorAll('.ul.menu li');
+
+// menuItem.forEach(item => {
+//   item.addEventListener('click', () => {
+//     burger.setAttribute('aria-expanded', this.getAttribute('aria-expanded') !== 'true')
+//   })
+// })

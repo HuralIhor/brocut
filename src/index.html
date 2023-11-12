@@ -67,7 +67,6 @@
                     <ul class="menu">
                         <li class="menu__item"><a href="/">ГОЛОВНА</a></li>
                         <li class="menu__item"><a href="#services">ПОСЛУГИ ТА ЦІНИ</a></li>
-                        <!-- <li class="menu__item"><a href="#">BROCREW</a></li> -->
                         <li class="menu__item"><a href="#">КОНТАКТИ</a></li>
                         <li class="menu__item _bookNow"><a href="#" class="booking">
                                 <span></span>
@@ -86,7 +85,8 @@
                     </ul>
                 </nav>
 
-                <button id="durgerMenu" type="button" onclick="this.ariaExpanded = this.ariaExpanded !== 'true'">
+                <button id="durgerMenu" type="button"
+                    onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') !== 'true')">
                     <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3 3H45" stroke="currentColor" stroke-width="7" stroke-linecap="round" />
                         <path d="M3 24H45" stroke="currentColor" stroke-width="7" stroke-linecap="round" />
@@ -356,19 +356,36 @@
 
 
     <script>
+        const body = document.querySelector('body');
         const burger = document.querySelector('#durgerMenu');
         const menu = document.querySelector('nav');
+        const menuItems = document.querySelectorAll('ul.menu li a');
+
+        function closeMenu() {
+            menu.classList.remove('active');
+            body.classList.remove('locked');
+            burger.setAttribute('aria-expanded', 'false');
+        }
+
         burger.addEventListener('click', () => {
             menu.classList.toggle('active');
-        })
+            body.classList.toggle('locked');
+        });
+
+        menuItems.forEach(item => {
+            item.addEventListener('click', function(event) {
+                closeMenu();
+                event.stopPropagation();
+                burger.setAttribute('aria-expanded', 'false')
+                console.log(1);
+            });
+        });
+
         window.addEventListener('resize', () => {
-            if (window.innerWidth >= 1024) {
-                if (menu.classList.contains('active')) {
-                    menu.classList.remove('active');
-                    burger.setAttribute("ariaExpanded", 'false')
-                }
+            if (window.innerWidth >= 1024 && menu.classList.contains('active')) {
+                closeMenu();
             }
-        })
+        });
     </script>
 
     <script src="js/lozad.js"></script>
