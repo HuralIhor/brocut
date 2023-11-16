@@ -5,13 +5,20 @@ footer {
 
     .content {
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        padding-bottom: 30px;
+
+        @media(min-width: 650px) {
+            flex-direction: row;
+        }
 
         .contacs {
             flex: 0 0 40%;
-            margin: 45px 0  45px;
-            padding-right: 45px;
-            text-align: end;
+            margin: 45px 0 45px;
+            padding-right: 0px;
+            text-align: center;
+
             // position: relative;
             // &::after {
             //     content: "";
@@ -23,6 +30,10 @@ footer {
             //     height: 2px;
             //     background-color: #fff;
             // }
+            @media(min-width:650px) {
+            text-align: end;
+            padding-right: 45px;
+            }
             .tel {
                 margin-bottom: 1rem;
 
@@ -42,15 +53,30 @@ footer {
                 max-width: 120px;
                 width: 100%;
                 margin-bottom: 1rem;
-                float: right;
+                margin-right: auto;
+                margin-left: auto;
+                @media(min-width:650px) {
+                    margin-right: 0;
+                }
             }
         }
+
         .map {
             flex: 0 0 60%;
-            margin: 45px 45px 0 0;
-            padding-left: 45px;
-            border-left: 2px solid #fff;
+            border-top: 2px solid #fff;
+            padding-left: 0px;
+            // padding: 45px;
+            padding: 45px 20px 10px;
             filter: brightness(.5);
+
+            @media (min-width: 650px) {
+                border-top: none;
+                border-left: 2px solid #fff;
+                padding:0 0 0 45px;
+                margin: 45px 45px 0 0;
+
+            }
+
             iframe {
                 width: 100%;
             }
