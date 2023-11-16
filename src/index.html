@@ -74,12 +74,12 @@
                         <li class="menu__item"><a href="/">ГОЛОВНА</a></li>
                         <li class="menu__item"><a href="#services">ПОСЛУГИ ТА ЦІНИ</a></li>
                         <li class="menu__item"><a href="#contacs">КОНТАКТИ</a></li>
-                        <li class="menu__item _bookNow"><a href="#" class="booking">
+                        <!-- <li class="menu__item _bookNow"><a href="#" class="booking">
                                 <span></span>
                                 <span></span>
                                 <span></span>
                                 <span></span>
-                                ЗАПИСАТИСЬ</a></li>
+                                ЗАПИСАТИСЬ</a></li> -->
 
                         <li class="menu__item _social">
                             <a href="https://www.instagram.com/bro.cut.barbershop/"><img
@@ -517,6 +517,20 @@
             trigger: ".booking"
         })
     </script>
+
+
+<script>
+    var ewWidget = new EasyWeekWidget({
+        url: 'https://widget.easyweek.io/bro-cut-barbershop',
+        button: {
+            text: 'Онлайн-запис',
+            showText: false,
+            color: '#000000',
+            background: '#ba1b1b'
+        },
+        trigger: ".booking"
+    })
+</script>
 
     <script>
         const body = document.querySelector('body');
