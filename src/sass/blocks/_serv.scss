@@ -1,12 +1,17 @@
 .services {
     padding: 100px 0 0;
     width: 100%;
-    height: 100vh;
+    // height: 100vh;
     overflow: scroll;
     background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 71% center;
     transition: transform .2s ease-in-out;
+    @media(min-width: 400px){
+    background-position: 21% center;
+
+    }
     @media(min-width: 1024px) {
         padding: 100px 0 0;
         position: relative;
@@ -20,7 +25,6 @@
         background-size: cover;
         z-index: -1;
         transition: transform 0.2s ease-in-out;
-    
     }
 
     svg {
